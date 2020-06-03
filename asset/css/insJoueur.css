@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+background-image: url(../images/bag.jpg);
+width: 100%;
+height: 600px;
+}
+.container .col-12{
+    background-color: black;
+    /* width: 100%; */
+    height: 50px;
+}
+
+.p1{
+   
+    color: white;
+    font-size: 30px;
+      margin-left: 200px;
+}
+.quizz{
+border-radius: 70px;
+width: 100PX;
+float: right;
+}
+.quiz{
+    border-radius: 70px;
+    width: 120px;
+
+    background-color: lightseagreen;
+    border-color: lightseagreen;
+    margin-top: 20px;
+    float: right;
+    }
+
+.gene{
+   background-color: rgb(226, 225, 225);
+    width: 94%;
+    height: 540px;
+   margin-left: 30px;
+    }
+    .gene .gene0{
+        background-color:#219653;
+         height: 60px;
+        
+         }
+.gene .gene1{
+    float: left;
+        background-color: rgb(255, 255, 255);
+         width: 60%;
+       margin-top: 25px;
+         height: 440px;
+        margin-left: 30px;
+         }
+.gene .gene2{
+            float: left;
+                background-color: rgb(255, 255, 255);
+                margin-top: 25px;
+                 width: 32%;
+                 height: 400px;
+                margin-left: 30px;
+ }
+.form-group{
+    width: 50%;
+   margin-left: 60px;
+   height: 50px;
+}
+.btn{
+    margin-left: 100px;
+    width: 160px;
+}

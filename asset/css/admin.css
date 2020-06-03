@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+background-image: url(../images/bag.jpg);
+width: 100%;
+height:600px;
+}
+.generale{
+    width: 80%;
+    margin-left: 100px;
+}
+.container .col-12{
+    background-color: black;
+    /* width: 100%; */
+    height: 50px;
+}
+.row .col{
+    background-color:#219653;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+}
+.row .col-md-4{
+    margin-left: 30px;
+    margin-top: 20px;
+   }
+   .row .col-md-4 .ge{
+        background-color:#219653;
+        width: 100%;
+        height: 140px;
+       } 
+ .logo{
+        width: 97px;
+        border-radius: 100%;
+        height: 100px;
+        margin-top: 10px;
+        margin-left: 60px;
+        float: left;
+       }
+       .nom{
+        margin-top: 0px;
+        color: white;
+       }
+ .row .col-md-4 .ge1{
+        background-color:#ffffff;
+        width: 100%;
+        height: 270px;
+       } 
+.row .col-md-4 .ge1 .conte1{
+        text-decoration: none;
+        margin-left: 20px;
+        margin-top: 40px;
+        margin: 19px;
+       }
+   .row .col-md-7{
+       float: left;
+    background-color:#ffffff;
+   
+    margin-left: 12px;
+    margin-top: 20px;
+   }
+
+.p1{
+   
+    color: white;
+    font-size: 30px;
+      margin-left: 200px;
+}
+.quizz{
+border-radius: 70px;
+width: 100PX;
+float: right;
+}
+.quiz{
+    border-radius: 70px;
+    width: 120px;
+    background-color: lightseagreen;
+    border-color: lightseagreen;
+    margin-top: 20px;
+    float: right;
+    }
+.contenue{
+   background-color: rgb(226, 225, 225);
+    
+    width: 100%;
+    }
+    .gene .gene0{
+        background-color:#219653;
+         height: 60px;
+        
+         }
+.gene .gene1{
+    float: left;
+        background-color: #219653;
+         width: 0%;
+       margin-top: 25px;
+         height: 440px;
+        margin-left: 30px;
+         }
+.gene .gene2{
+                background-color: rgb(255, 255, 255);
+                margin-top: 25px;
+                 width: 32%;
+                 height: 400px;
+                margin-left: 30px;
+ }
+.form-group{
+    width: 50%;
+   margin-left: 60px;
+   height: 50px;
+}
+.btn{
+    margin-left: 100px;
+    width: 160px;
+}

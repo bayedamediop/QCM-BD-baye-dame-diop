@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+}
+.container{
+    background-image: url(../images/bag.jpg);
+    width: 100%;
+    height: 550px;
+}
+/* TOP BARE */
+.container .col-12{
+    background-color: black;
+    /* width: 100%; */
+    height: 50px;
+}
+.container .col-6{
+    background-color: rgb(167, 26, 26);
+    /* width: 100%; */
+    height: 50px;
+}
+.container .col-12 .p1{
+    color: white;
+    font-size: 30px;
+      margin-left: 200px;
+}
+.container .col-12 .quizz{
+border-radius: 70px;
+width: 100PX;
+float: right;
+}
+/* cadre de login */
+.container .cadre{
+    background-color: white;
+    width: 80%;
+    height: 390px;
+    margin: inherit;
+    margin-top: 60px;
+    border-radius: 100px;
+}
+.container .cadre .col-6 .login{
+     /* width: 0%; */
+    height: 350px;
+    margin: inherit;
+    margin-top: 80px;
+    border-radius: 100px;
+}
+.container .cadre .col-6 .login .form-group{
+    border-radius: 100px;
+}
+.img{
+    border-radius: 20px;
+width: 130px;
+margin-left: 100px;
+margin-top: 15PX;
+}
+.a{
+    float: right;
+}
+ .design{
+    float: right;
+    width: 40%;
+  margin-top: -230px;
+}
+.src{
+    width: 150PX;
+    margin-left: 82px;
+}
+.form-group{
+    margin: 0;
+}
