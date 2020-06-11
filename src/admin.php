@@ -1,7 +1,7 @@
 <?php
 session_start ();
 // session_destroy ();
-$p=isset($_GET['p'])?$_GET['p']:'creer_question';
+$p=isset($_GET['p'])?$_GET['p']:'liste';
 // if (!isset($_SESSION['user']['pwd'])) {
 //     header('location:../index.php');
 // }
@@ -15,8 +15,8 @@ $p=isset($_GET['p'])?$_GET['p']:'creer_question';
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../asset/css/admin.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="../asset/css/admin.css">
+    <link rel="stylesheet" href="../asset/css/bootstrap.min.css">
   </head>
   <body>
   <div class="container">
@@ -39,7 +39,7 @@ $p=isset($_GET['p'])?$_GET['p']:'creer_question';
                         <div class="im">
                             <!-- <?='<img  class="logo" src="'. $_SESSION['user']['file']. '" >';
                           ?> -->
-                          <img class="logo" src="../asset/images/quizz.png" alt="">
+                          <img class="logo" src="../asset/images/diop1.png" alt="">
                           <p class="nom">
                           <?=  $_SESSION['user']['prenom'] ;?><br>
                           <?=  $_SESSION['user']['nom'] ;?></p>
@@ -48,9 +48,9 @@ $p=isset($_GET['p'])?$_GET['p']:'creer_question';
                         <div class="ge1">
                         <div class="lists">
                           <br>
-                            <a href=" ?p=liste-question" class="conte1" id="conte1">Liste Questions  </a> <br><br>
+                            <a href=" ?p=listequestion" class="conte1" id="conte1">Liste Questions  </a> <br><br>
                           <a href=" ?p=inscrireAdmin" class="conte1" id="conte1" >  Creer Admin      </a><br><br>
-                            <a href=" ?p=liste_joueuer" class="conte1" id="conte1" >  Liste joueurs   </a><br><br>
+                            <a href=" ?p=liste" class="conte1" id="conte1" >  Liste joueurs   </a><br><br>
                           <a href=" ?p=creer_question" class="conte1"id="conte1" >Creer Questions  </a><br><br>
                             </div>
                         </div>
@@ -67,7 +67,7 @@ $p=isset($_GET['p'])?$_GET['p']:'creer_question';
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    </form>
+
     
 
   </body>

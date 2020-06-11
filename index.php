@@ -82,7 +82,7 @@
 
     <!-- Optional JavaScript -->
     
-    <script src="asset/ajax/valideIndex.js"></script>
+    <script src="asset/ajax/valideUser.js"></script>
     
   </body>
 </html>

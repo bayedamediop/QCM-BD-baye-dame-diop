@@ -1,5 +1,5 @@
 
-      <form action="" method="POST">
+      <form action="" method="POST" enctype="multipart/form-data">
      
        <div class="gene">
            <!-- <div class="gene0">
@@ -29,21 +29,22 @@
              </div>
              <div class="form-group">
                 <label for="cpassword">confirmer votre password:</label>
-                <input type="cpassword" name="cpassword" class="form-control" id="cpassword">
+                <input type="password" name="cpassword" class="form-control" id="cpassword">
                 <span class="cpassword" style="float: right;"></span>
               </div>
              <input type="hidden" name="role" value="admin" id="role">
             
              <div class="form-group">
              <label for="file"></label>
-                <input type="file" class="form-control-file border" name="file">
+                <input type="file" class="form-control-file border" id="file" name="file">
                 <span id="e_no"></span>
              </div>
              <button type="submit" name="submit" id="submit" class="btn btn-success">S'inscrire</button>
          </div>
        
-       </div>
+         </div>
       </div>
+        </form>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../asset/jquery/dist/jquery.min.js"></script>
@@ -57,11 +58,13 @@
                  var password = $("#password").val();
                  var cpassword = $("#cpassword").val();
                  var role = $("#role").val();
+                 var file = $("#file").val();
+
                  if (nom =="" || prenom =="" || login =="" || password =="" || role =="" ) {
                    alert ("saisire tout les champs");
                  }else
                  {
-                    var donnes ='nom='+nom+'&prenom='+prenom+'&login='+login+'&password='+password+'&role='+role;
+                    var donnes ='nom='+nom+'&prenom='+prenom+'&login='+login+'&password='+password+'&role='+role+'&file='+file;
                     $.ajax({
                         type : "POST",
                         url : "functions/insertion.php",
@@ -74,7 +77,7 @@
                  }
                  
              });
-             //controle password
+
              
           });
         //   $(document).ready(function(){
