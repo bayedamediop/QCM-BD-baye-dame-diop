@@ -23,12 +23,12 @@
         $.ajax({
             type: "POST",
             url: "../src/functions/getQuestion.php",
-            data: {limit:3,offset:offset,date:date},
+            data: {limit:2,offset:offset,date:date},
             dataType: "JSON",
             success: function (data) {
                 tbody.html('')
                 printData(data,tbody);
-                offset +=3
+                offset +=2;
             }
         });
 
@@ -46,12 +46,12 @@
                 $.ajax({
                     type: "POST",
                     url: "../src/functions/getQuestion.php",
-                    data: {limit:3,offset:offset,date:date},
+                    data: {limit:2,offset:offset},
                     dataType: "JSON",
                     success: function (data) {
 
                         printData(data,tbody);
-                        offset +=3;
+                        offset +=2;
                     }
                 });
             }
@@ -60,13 +60,17 @@
     });
     function printData(data,tbody){
         $.each(data, function(indice,jeux){
-            tbody.append(`
+            if(jeux.type='choixmultiple'){
+                //alert(oki');
+             tbody.append(`
             <tr class="text-center">
                 <td>${jeux.question}</td>
+                <td>${jeux.reponse}</td>
 
 
             </tr>
         `);
+            }
         });
     }
 </script>

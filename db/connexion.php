@@ -1,6 +1,6 @@
 <?php
     $dbhost = 'localhost';
-    $dbname = 'mini_projet';
+    $dbname = 'quizz_bayedame_diop';
     $dbuser = 'root';
     $dbpswd = '';
     try{

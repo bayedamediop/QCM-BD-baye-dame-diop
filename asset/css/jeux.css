@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-xl{
+    background-image: url(../images/bag.jpg);
+    width: 100%;
+    height:550px;
+}
+
+.row .col{
+    background-color:#219653;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+}
+.p1{
+
+    color: white;
+    font-size: 30px;
+    margin-left: 200px;
+}
+.quizz{
+    border-radius: 70px;
+    width: 100PX;
+    float: right;
+}

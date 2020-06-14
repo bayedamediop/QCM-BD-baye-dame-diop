@@ -3,7 +3,7 @@
     require_once('src/function.php');
     $_SESSION['pageCourant']=1;
     $_SESSION['courantPage']=1;
-    $_SESSION['user'] = [];
+    $_SESSION['user']=[];
     if(isset($_POST['btn'])){
       
             $login=$_POST['login'];

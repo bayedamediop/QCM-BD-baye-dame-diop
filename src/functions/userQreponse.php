@@ -3,11 +3,11 @@ require_once ('../function.php');
 $cnx = getConnection() ;
 
 if($_POST){
-    $question = $_POST['question'];
-    $rep = $_POST['rep'];
-    $etat = $_POST['etat'];
+    $user_id = $_POST['$user_id'];
+    $questions_id = $_POST['questions_id'];
+    //$etat = $_POST['etat'];
 
-    $sql = "INSERT INTO `reponses` VALUES (null,'".$question."','".$rep."','".$etat='1'."')";
+    $sql = "INSERT INTO `user_questions` VALUES (null,'".$user_id."','".$questions_id."')";
     $query = $cnx->prepare($sql);
     $result= $query->execute();
     if ($result) {

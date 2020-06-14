@@ -2,7 +2,7 @@
 // co²nnection dans la basse de donnees
 function getConnection()
     {
-        $dbName = "mini_projet";
+        $dbName = "quizz_bayedame_diop";
        $host  = "localhost";
        $usename = "root";
        $password = "";

@@ -5,13 +5,10 @@ global $db;
 
 $limit = $_POST['limit'];
 $offset = $_POST['offset'];
-$date = $_POST['date'];
-
-
 $sql = "
             SELECT * 
-            FROM questions 
-            ORDER BY id DESC
+            FROM questions,reponses where questions.id=reponses.questions_id
+            ORDER BY reponses.id DESC
             LIMIT {$limit} 
             OFFSET {$offset}
     ";

@@ -1,4 +1,3 @@
-
 <?php
 require_once "../db/connexion.php";
 global $db;
@@ -6,25 +5,19 @@ $results = $db->query('SELECT * FROM  questions');
 $resultss = $db->query('SELECT * FROM  questions');
 
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../asset/css/question.CSS">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Document</title>
+      <title>Document</title>
 
 </head>
 <body>
-
-
-<!-- <div class="container"> -->
-
 <form action="" method="POST" id="forme" >
     <div class="row">
-        <div  >
+        <div  CLASS="" >
             <select  class="form-control  " id="question" name="question">
                 <option> selecte question</option>
                 <?php
@@ -57,7 +50,7 @@ $resultss = $db->query('SELECT * FROM  questions');
     </div>
     <div>
 
-        <div id="choix" class="col-ms-8">
+        <div id="choix" name="rep[]" class="col-ms-8">
         </div>
     </div>
     <input type="submit"  class="btn btn-success " name="submit" id="submit" value="Submit">
@@ -75,9 +68,8 @@ $resultss = $db->query('SELECT * FROM  questions');
                 // alert($("#typ"));
                 i=i+1;
                 $("#choix").append('<input type="text" id="row'+i+'" name="rep[]" class="rep" placeholder="Réponse'+i+'" style=width:230px; float:left; height: 30px;">',
-                    '<input type="checkbox" id="row'+i+'" name="rep[]">',
                     'Etat',
-                    '<input  type="checkbox" id="etet" name="etat" checked="checked">',
+                    '<input  type="checkbox" id="etat" name="etat"  class="etat"  value="1">',
                     '</button id="btn-remove">',
                     '<img  src="../asset/images/ic-supprimer.png\">',
                     '</button >');
@@ -86,9 +78,9 @@ $resultss = $db->query('SELECT * FROM  questions');
                 // alert($("#typ"));
                 i=i+1;
                 $("#choix").append('<input type="text" id="row'+i+'"  name="rep[]" class="rep" placeholder="Réponse'+i+'" style=width:230px; float:left; height: 30px;">',
-                    '<input type="radio" id="row'+i+'" name="rep[]">',
+
                     'Etat',
-                    '<input  type="checkbox" id="etet" name="etat" checked="checked">',
+                    '<input  type="radio" id="etat" name="etat" class="etat" value="1">',
                     '</button  id="btn-remove">',
                     '<img src="../asset/images/ic-supprimer.png\">',
                     '</button >' );
@@ -96,34 +88,28 @@ $resultss = $db->query('SELECT * FROM  questions');
             if(type =="choixtext"){
                 // alert($("#typ"));
 
-                $("#choix").append('<textarea name="rep" placeholder="Réponse" style=width:230px; float:left; height: 30px;></textarea>' );
+                $("#choix").append('<textarea name="rep" id="rep[]" placeholder="Réponse" style=width:230px; float:left; height: 30px;></textarea>' );
             }
         });
         $(document).on('click','#btn-remove',function(){
             var btn_id = $('this').attr("id");
             $("#row"+btn_id+"").remove();
         });
-
         $("#submit").click(function(){
-
             var question = $("#question").val();
             var rep = $(".rep").val();
             var etat = $("#etat").val();
             var donnes ='question='+question+'&rep='+rep+'&etat='+etat;
-            var i = 0;
             $.ajax({
                 method : "POST",
                 url : "functions/reponse.php",
                 data : donnes,
-                success:function(data) {
-                    //Nécessite d'avoir les informations du tableau dans le
-                    //même ordre que les inputs
-
-                    $('input.ajax').each(function(){
-                        $(this).val(data[i]);
-                        i++;
-                    });
+                success : function (){
+                    alert("Send");
+                    alert(donnes);
+                    console.log(donnes);
                 }
+
             });
         });
     });

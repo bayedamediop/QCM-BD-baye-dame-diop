@@ -2,9 +2,9 @@
 session_start ();
 // session_destroy ();
 $p=isset($_GET['p'])?$_GET['p']:'liste';
-// if (!isset($_SESSION['user']['pwd'])) {
-//     header('location:../index.php');
-// }
+ if (!isset($_SESSION['user']['password'])) {
+     header('location:../index.php');
+ }
 ?>
 <!doctype html>
 <html lang="fr">
@@ -29,7 +29,7 @@ $p=isset($_GET['p'])?$_GET['p']:'liste';
     <div class="generale">
       <div class="row">
           <div class="col">
-          <button type="button" class="quiz">Deconnecter</button>
+          <button type="button" class="quiz"> <a href="deconnecte.php">Deconnecter</a>  </button>
              <P class="p1">CRÉER ET PARAMÉRTER VOS QUIZZ </P>
           </div>
          <div class="contenue">
@@ -51,7 +51,7 @@ $p=isset($_GET['p'])?$_GET['p']:'liste';
                             <a href=" ?p=listequestion" class="conte1" id="conte1">Liste Questions  </a> <br><br>
                           <a href=" ?p=inscrireAdmin" class="conte1" id="conte1" >  Creer Admin      </a><br><br>
                             <a href=" ?p=liste" class="conte1" id="conte1" >  Liste joueurs   </a><br><br>
-                          <a href=" ?p=creer_question" class="conte1"id="conte1" >Creer Questions  </a><br><br>
+                          <a href=" ?p=creer_question" class="conte1" id="conte1" >Creer Questions  </a><br><br>
                             </div>
                         </div>
                        
